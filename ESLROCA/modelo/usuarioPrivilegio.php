@@ -15,12 +15,14 @@ class UsuarioPrivilegio
         $db = $this->conexion->conectarBD(); // Conectar a la base de datos
 
         // Preparar la consulta para evitar inyección SQL
-        $sql = "SELECT P.labelPrivilegio, P.pathPrivilegio, P.iconPrivilegio
-                FROM usuario U
-                INNER JOIN usuarioprovilegio UP ON U.login = UP.login
-                INNER JOIN privilegio P ON P.idPrivilegio = UP.idPrivilegio
-                WHERE U.login = ?";
-        
+        $sql = "SELECT P.NombrePrivilegio AS labelPrivilegio, 
+                    P.pathPrivilegio, P.iconPrivilegio
+                    FROM usuario U
+                    INNER JOIN usuarioprivilegio UP 
+                    ON U.UsuarioID = UP.UsuarioID
+                    INNER JOIN privilegio P ON P.PrivilegioID = UP.PrivilegioID
+                    WHERE U.NombreUsuario = ?";
+
         $stmt = $db->prepare($sql); // Preparar la consulta
         if (!$stmt) {
             die("Error al preparar la consulta: " . $db->error);
@@ -43,4 +45,4 @@ class UsuarioPrivilegio
         return $fila;
     }
 }
-?>
+

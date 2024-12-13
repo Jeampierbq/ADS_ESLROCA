@@ -5,7 +5,7 @@ class Usuario
 {
     public function validarLogin($login)
     {
-        $sql = "SELECT login FROM usuario WHERE login = '$login'";
+        $sql = "SELECT NombreUsuario FROM usuario WHERE NombreUsuario = '$login'";
         $conexion = Conexion::conectarBD();
         $respuesta = $conexion->query($sql);
 
@@ -21,7 +21,7 @@ class Usuario
 
     public function validarPassword($login, $password)
     {
-        $sql = "SELECT login FROM usuario WHERE login = '$login' AND password ='$password'";
+        $sql = "SELECT NombreUsuario FROM usuario WHERE NombreUsuario = '$login' AND Contraseña ='$password'";
         $conexion = Conexion::conectarBD();
         $respuesta = $conexion->query($sql);
 

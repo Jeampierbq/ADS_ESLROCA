@@ -9,7 +9,7 @@ class Conexion
         $server = "localhost";
         $user = "root";
         $pass = "";
-        $db = "prueba";
+        $db = "bdtacsa";
 
         self::$conexion = new mysqli($server, $user, $pass, $db);
 

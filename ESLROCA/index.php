@@ -1,5 +1,7 @@
 <?php
-    include_once('./securityModule/formAutenticarUsuario.php');
+    include_once('./moduloSeguridad/formAutenticarUsuario.php');
     $obj = new formAutenticarUsuario();
     $obj -> formAutenticarUsuarioShow();
 ?>
+
+

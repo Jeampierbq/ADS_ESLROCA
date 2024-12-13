@@ -7,7 +7,7 @@
         {
             $this -> cabeceraShow("Autenticacion de usuario");
             ?>
-            <form name='autenticar usuario' method = 'POST' action='./securityModule/getUsuario.php'>
+            <form name='autenticar usuario' method = 'POST' action='./moduloSeguridad/getUsuario.php'>
                 <table align='center' border = '0'>
                     <tr>
                         <td colspan ='2' align='left'>
@@ -15,7 +15,7 @@
                         </td>
                     </tr>
 
-                    <tr><td rowspan = '3' align = 'left'><img width="80" height="50" src="./securityModule/candado.png" alt = "Descripcion"></td></tr>
+                    <tr><td rowspan = '3' align = 'left'><img width="80" height="50" src="./moduloSeguridad/candado.png" alt = "Descripcion"></td></tr>
                     <tr>
                         <td>Login:</td>
                         <td><input name='txtLogin' id='txtLogin' type='text'/></td>
